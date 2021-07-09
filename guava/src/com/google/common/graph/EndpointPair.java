@@ -104,8 +104,9 @@ public abstract class EndpointPair<N> implements Iterable<N> {
    * Returns the node that is adjacent to {@code node} along the origin edge.
    *
    * @throws IllegalArgumentException if this {@link EndpointPair} does not contain {@code node}
+   * @since 20.0 (but the argument type was changed from {@code Object} to {@code N} in 31.0)
    */
-  public final N adjacentNode(Object node) {
+  public final N adjacentNode(N node) {
     if (node.equals(nodeU)) {
       return nodeV;
     } else if (node.equals(nodeV)) {
